@@ -20,3 +20,9 @@ this repository holds the new version of the rgb light initially developped in '
 * usb power delivery/vcp: FT232HP
 
 
+## TODOs zegonix
+
+* find components for encoder & buttons
+* plan front panel
+* setup basic software project
+
