@@ -12,7 +12,7 @@ this repository holds the new version of the rgb light initially developped in '
 * temperature sensor for safety..
 
 
-## components
+## Components
 
 * controller: raspberry pi pico 2w
 * display: waveshare 2.66" epaper
@@ -20,6 +20,7 @@ this repository holds the new version of the rgb light initially developped in '
 * leds: XPLDCL.. (CREE LED)
 * driver: TPS61165
 * usb power delivery/vcp: FT230XS-R
+* rotary encoder: PEC11R-4220F-S0024
 
 
 ## TODOs zegonix
