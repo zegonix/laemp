@@ -18,8 +18,10 @@ INC_DIR    := include
 SYS_DIR    := system
 
 # sources
-AS_SOURCES := $(SYS_DIR)/rp2350-startup.s
-C_SOURCES  := $(SRC_DIR)/main.c
+AS_SOURCES := $(SYS_DIR)/rp2350-startup-routine.s
+C_SOURCES  := $(SYS_DIR)/syscalls.c \
+			  $(SYS_DIR)/sysmem.c \
+			  $(SRC_DIR)/main.c
 
 # commands
 PREFIX := arm-none-eabi-
@@ -56,7 +58,7 @@ C_INC     := -I$(INC_DIR)
 C_FLAGS   := $(TARGET_FLAGS) $(GCC_FLAGS) $(C_DEFS) $(C_INC) $(DEBUG_FLAGS)
 
 LIBRARIES := -lc -lm -lnosys
-LD_SCRIPT := $(SYS_DIR)/rp2350.ld
+LD_SCRIPT := $(SYS_DIR)/rp2350-linker-script.ld
 # to reduce the binary size add `-specs=nano.specs`
 # this also reduces the available features (e.g. printf will not print floats)
 LD_FLAGS  := $(TARGET_FLAGS) -T$(LD_SCRIPT) $(LIBRARIES) -Wl,--gc-sections

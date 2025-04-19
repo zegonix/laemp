@@ -17,10 +17,10 @@ MEMORY
  * therefore the addresses for the stack are
  * calculated here
  */
-_estack = ORIGIN(RAM) + LENGTH(RAM)
+_estack = ORIGIN(ram) + LENGTH(ram);
 
-HEAP_SIZE  = 0x1000; /* 4kB of heap */
-STACK_SIZE = 0x1000; /* 4kB of stack */
+_heap_size  = 0x1000; /* 4kB of heap */
+_stack_size = 0x1000; /* 4kB of stack */
 
 SECTIONS
 {
@@ -47,6 +47,7 @@ SECTIONS
         . = ALIGN(4);
     }
 
+    _sidata = LOADADDR(.data);
     .data :
     {
         _sdata = .;
@@ -57,8 +58,10 @@ SECTIONS
     .heap :
     {
         . = ALIGN(8);
+        PROVIDE ( end = . );
+        PROVIDE ( _end = . );
         _sheap = .;
-        . = . + HEAP_SIZE;
+        . = . + _heap_size;
         . = ALIGN(8);
         _eheap = .;
     } > ram
@@ -67,7 +70,7 @@ SECTIONS
     {
         . = ALIGN(8);
         _sstack = .;
-        . = . + STACK_SIZE;
+        . = . + _stack_size;
         . = ALIGN(8);
         _estack = .;
     }
