@@ -5,7 +5,7 @@
 SHELL := /usr/bin/env bash
 
 # project/output name
-TARGET := laempli
+TARGET := laemp
 
 # enable/disable debug symbols (0 = disable, 1 = enable)
 DEBUG  := 1
@@ -53,7 +53,7 @@ AS_DEFS   :=
 AS_INC    := 
 AS_FLAGS  := -x assembler-with-cpp $(TARGET_FLAGS) $(GCC_FLAGS) $(AS_DEFS) $(AS_INC) $(DEBUG_FLAGS)
 
-C_DEFS    := 
+C_DEFS    := -DRP2350_PACKAGE=QFN60
 C_INC     := -I$(INC_DIR)
 C_FLAGS   := $(TARGET_FLAGS) $(GCC_FLAGS) $(C_DEFS) $(C_INC) $(DEBUG_FLAGS)
 
@@ -72,7 +72,7 @@ vpath %.s $(sort $(dir $(AS_SOURCES)))
 # rules
 .PHONY: all clean rebuild test
 
-all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
+all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin $(BUILD_DIR)/$(TARGET).uf2
 
 # build objects from c files
 $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
@@ -95,12 +95,16 @@ $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | $(OBJ_DIR)
 $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | $(OBJ_DIR)
 	$(BIN) $< $@
 
+# generate .uf2 file
+$(BUILD_DIR)/%.uf2: $(BUILD_DIR)/%.elf | $(OBJ_DIR)
+	elf2uf2-rs $<
+
 # ensure that the build dir exists
 $(OBJ_DIR):
 	@mkdir -p $@
 
 clean: | $(OBJ_DIR)
-	@rm -rf $(BUILD_DIR)/*.{elf,hex,bin}
+	@rm -rf $(BUILD_DIR)/*.{elf,hex,bin,uf2}
 	@rm -rf $(OBJ_DIR)/*
 	@echo "output files deleted"
 

@@ -34,7 +34,7 @@ Reset_Handler:
     mov   sp, r0
 
     // call an optional clock system initialisation function
-    // bl  SystemInit
+    // bl  system_init
 
     // initialise data section
     ldr r0, =_sidata
