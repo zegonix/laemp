@@ -14,13 +14,16 @@ this repository holds the new version of the rgb light initially developped in '
 
 ## Components
 
-* controller: raspberry pi pico 2w
-* display: waveshare 2.66" epaper
-* usb-c connector panel mount: X-49166
-* leds: XPLDCL.. (CREE LED)
-* driver: TPS61165
-* usb power delivery/vcp: FT230XS-R
-* rotary encoder: PEC11R-4220F-S0024
+| component                   | order number           |
+| :-------------------------- | :--------------------- |
+| controller                  | raspberry pi pico 2w   |
+| display                     | waveshare 2.66" epaper |
+| usb-c connector panel mount | X-49166                |
+| leds                        | XPLDCL.. (CREE LED)    |
+| driver                      | TPS61165               |
+| usb power delivery/vcp      | FT230XS-R              |
+| rotary encoder              | PEC11R-4220F-S0024     |
+| buttons                     | 2449-FHNDSBX-ND        |
 
 
 ## TODOs zegonix
