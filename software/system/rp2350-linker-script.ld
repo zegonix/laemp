@@ -45,7 +45,7 @@ SECTIONS
         . = ALIGN(4);
         *(.rodata*)
         . = ALIGN(4);
-    }
+    } > flash
 
     _sidata = LOADADDR(.data);
     .data :
@@ -73,5 +73,5 @@ SECTIONS
         . = . + _stack_size;
         . = ALIGN(8);
         _estack = .;
-    }
+    } > ram
 }
