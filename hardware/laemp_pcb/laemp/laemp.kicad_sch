@@ -2685,12 +2685,6 @@
 		(uuid "84ac6fbb-b62e-46d5-9140-e161fef24912")
 	)
 	(junction
-		(at 39.37 212.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b48d1708-38b8-49f9-b550-e28e283452fb")
-	)
-	(junction
 		(at 212.09 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2741,16 +2735,6 @@
 			(type default)
 		)
 		(uuid "101842d9-ff4d-4e4b-a500-a8c7ed015be1")
-	)
-	(wire
-		(pts
-			(xy 64.77 191.77) (xy 64.77 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12541a6b-e7e3-442e-8f29-65883a5f1c55")
 	)
 	(wire
 		(pts
@@ -2844,6 +2828,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 191.77) (xy 64.77 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6702dc39-b41f-4b80-9727-0e67aeae0cc8")
+	)
+	(wire
+		(pts
 			(xy 212.09 81.28) (xy 212.09 85.09)
 		)
 		(stroke
@@ -2914,33 +2908,13 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 212.09) (xy 39.37 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f961186-77a7-440a-8c41-63b394e767be")
-	)
-	(wire
-		(pts
-			(xy 39.37 212.09) (xy 39.37 218.44)
+			(xy 39.37 204.47) (xy 39.37 218.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "908b6ebc-a090-4950-96d3-5d15054e5731")
-	)
-	(wire
-		(pts
-			(xy 39.37 204.47) (xy 39.37 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92154056-6d18-4efd-8b73-1e49bd666f1b")
 	)
 	(wire
 		(pts
@@ -3671,6 +3645,84 @@
 			(project "laemp"
 				(path "/990afbf2-17b3-4e1d-b2b2-21e40305ab5f"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 64.77 218.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3450a265-7103-4623-831b-476426c79e71")
+		(property "Reference" "#PWR035"
+			(at 64.77 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AGND"
+			(at 64.77 223.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.77 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.77 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 64.77 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ad68b3bd-94ef-4343-8b5b-410ad504fd93")
+		)
+		(instances
+			(project "laemp"
+				(path "/990afbf2-17b3-4e1d-b2b2-21e40305ab5f"
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
