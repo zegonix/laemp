@@ -2170,7 +2170,7 @@
 	)
 	(text "NEEDS THERMAL VIAS"
 		(exclude_from_sim no)
-		(at 65.786 25.908 0)
+		(at 71.12 24.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5909,7 +5909,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Vishay_IHLP-4040"
 			(at 163.83 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -6324,7 +6324,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Vishay_IHLP-4040"
 			(at 67.31 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -8182,7 +8182,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Vishay_IHLP-4040"
 			(at 68.58 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -8954,7 +8954,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Vishay_IHLP-4040"
 			(at 162.56 101.6 0)
 			(hide yes)
 			(show_name no)
